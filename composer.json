@@ -2,7 +2,7 @@
     "name": "nadimtuhin/dse-scrapper",
     "description": "Dhaka Stock Exchange Scrapper",
     "license": "MIT",
-    "minimum-stability": "v0.1",
+    "minimum-stability": "stable",
     "keywords": ["dse"],
     "authors": [
         {
