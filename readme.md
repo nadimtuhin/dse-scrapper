@@ -5,7 +5,7 @@ install using composer
 ```json
 {
     "require": {
-        "nadimtuhin/dse-scrapper": "*"
+        "nadimtuhin/dse-scrapper": "dev-master"
     }
 }
 ```
