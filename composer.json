@@ -2,13 +2,13 @@
     "name": "nadimtuhin/dse-scrapper",
     "description": "Dhaka Stock Exchange Scrapper",
     "license": "MIT",
+    "keywords": ["dse"],
     "authors": [
         {
             "name": "Nadim Tuhin",
             "email": "nadimtuhin@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0"
     },
