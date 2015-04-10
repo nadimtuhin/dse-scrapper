@@ -1,0 +1,19 @@
+{
+    "name": "nadimtuhin/dse-scrapper",
+    "description": "Dhaka Stock Exchange Scrapper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nadim Tuhin",
+            "email": "nadimtuhin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require": {
+        "symfony/dom-crawler": "3.0.*@dev",
+        "symfony/css-selector": "3.0.*@dev"
+    }
+}
