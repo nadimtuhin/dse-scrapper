@@ -1,5 +1,16 @@
 # Dhaka Stock Exchange Scrapper
 
+## Install 
+install using composer
+```json
+{
+    "require": {
+        "nadimtuhin/dse-scrapper": "*"
+    }
+}
+```
+
+## Usage
 ```php
 require_once('vendor/autoload.php');
 
