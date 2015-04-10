@@ -1,4 +1,5 @@
 <?php
+
 require_once('vendor/autoload.php');
 
 $scrapper = new NadimTuhin\DSE\DseScrapper();
