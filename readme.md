@@ -1,6 +1,9 @@
 # Dhaka Stock Exchange Scrapper
 Scrapping Dhaka Stock Exchange (DSE) data were never easier. Easy to use API. Pull requests, bug reports, feature requests are welcome.
 
+## NOTE:
+This software is to be used `For Educational Purposes` only (I do not want to go to jail :p). If this software is used against the Terms and Conditions stated in dsebd.org I would not responsible.
+
 ## Install 
 install using composer
 ```json
