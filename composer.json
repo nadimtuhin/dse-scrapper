@@ -1,9 +1,10 @@
 {
     "name": "nadimtuhin/dse-scrapper",
     "description": "Dhaka Stock Exchange Scrapper",
-    "license": "MIT",
-    "minimum-stability": "stable",
+    "homepage": "http://nadimtuhin.github.io",
+    "type": "library",
     "keywords": ["dse"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Nadim Tuhin",
@@ -20,6 +21,12 @@
     "autoload": {
         "psr-4": {
             "NadimTuhin\\DSE\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
         }
     }
 }
