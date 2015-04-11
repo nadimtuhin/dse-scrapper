@@ -1,22 +1,22 @@
 {
     "name": "nadimtuhin/dse-scrapper",
     "description": "Dhaka Stock Exchange Scrapper",
+    "keywords": ["dse"],
     "homepage": "http://nadimtuhin.github.io",
     "type": "library",
-    "keywords": ["dse"],
     "license": "MIT",
     "authors": [
         {
             "name": "Nadim Tuhin",
-            "email": "nadimtuhin@gmail.com"
+            "email": "nadimtuhin@gmail.com",
+            "homepage": "http://nadimtuhin.github.io",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.3.0"
-    },
-    "require": {
-        "symfony/dom-crawler": "3.0.*@dev",
-        "symfony/css-selector": "3.0.*@dev"
+        "php": ">=5.3.0",
+        "symfony/dom-crawler": "2.6.*",
+        "symfony/css-selector": "2.6.*"
     },
     "autoload": {
         "psr-4": {
