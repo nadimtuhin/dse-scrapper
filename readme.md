@@ -1,4 +1,5 @@
 # Dhaka Stock Exchange Scrapper
+Scrapping Dhaka Stock Exchange (DSE) data were never easier. Easy to use API. Pull requests, bug reports, feature requests are welcome.
 
 ## Install 
 install using composer
