@@ -2,7 +2,7 @@
 namespace NadimTuhin\DSE;
 use Symfony\Component\DomCrawler\Crawler;
 
-class Transformer{
+class Transformer {
     public function transform($stocksData)
     {
         $keys = array(
