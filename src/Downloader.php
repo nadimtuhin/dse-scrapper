@@ -1,7 +1,7 @@
 <?php
 namespace NadimTuhin\DSE;
 
-class Downloader{
+class Downloader {
     public function request($host, $referer)
     {
         $ch = curl_init();
