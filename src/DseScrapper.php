@@ -1,7 +1,7 @@
 <?php
 namespace NadimTuhin\DSE;
 
-class DseScrapper{
+class DseScrapper {
     public function scrap()
     {
         // $html = file_get_contents(base_path('resources/views/dse.php'));
