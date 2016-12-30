@@ -2,7 +2,7 @@
 namespace NadimTuhin\DSE;
 use Symfony\Component\DomCrawler\Crawler;
 
-class Parser{
+class Parser {
     public function parse($html)
     {
         $crawler = new Crawler($html);
