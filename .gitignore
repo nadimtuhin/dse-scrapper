@@ -3,4 +3,7 @@
 .env
 composer.lock
 dse-scrapper.sublime-project
-dse-scrapper.sublime-workspace
+dse-scrapper.sublime-workspacenode_modules
+.DS_Store
+dist
+build
