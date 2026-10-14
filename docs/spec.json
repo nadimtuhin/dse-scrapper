@@ -1,0 +1,2 @@
+{ "banners": { "h-start": "GET STARTED", "h-how": "HOW IT WORKS", "h-dev": "FOR DEVELOPERS" },
+  "hero": { "kicker": "OPEN SOURCE · PHP · COMPOSER", "title": "DSE Scrapper", "tagline": "Dhaka Stock Exchange prices as a PHP array" } }

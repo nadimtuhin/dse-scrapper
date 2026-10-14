@@ -1,3 +1,65 @@
+<div align="center">
+
+# DSE Scrapper
+
+![DSE Scrapper: Dhaka Stock Exchange prices as a PHP array](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/hero.svg)
+
+**One call, one array.** Back when DSE served the page.
+
+`MIT` `PHP 5.4+` `Composer`
+
+</div>
+
+<br>
+
+![Get started](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/h-start.svg)
+
+> [!WARNING]
+> This no longer works. DSE retired the page the scraper reads (`latest_share_price_all.php` now returns 410 Gone), so `scrap()` returns an empty array. Kept for reference.
+
+**1. Add it to `composer.json`:**
+
+```json
+{
+    "require": {
+        "nadimtuhin/dse-scrapper": "0.1.*@dev"
+    }
+}
+```
+
+**2. Install:**
+
+```bash
+composer install
+```
+
+**3. Run it:**
+
+```php
+require_once('vendor/autoload.php');
+
+$scrapper = new NadimTuhin\DSE\DseScrapper();
+$data = $scrapper->scrap();
+
+print_r($data);
+```
+
+Save as `run.php`, then run `php run.php`.
+
+<br>
+
+![How it works](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/h-how.svg)
+
+**Three small steps.** `Downloader` fetches the latest share price page from `dsebd.org`. `Parser` reads each table row. `Transformer` names the columns.
+
+**Values stay as text.** Numbers come back as strings, like `"1,105"`, so convert them yourself if you need math.
+
+<br>
+
+![For developers](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/h-dev.svg)
+
+Everything below is reference. You don't need it to get started.
+
 # Dhaka Stock Exchange Scrapper
 Scrapping Dhaka Stock Exchange (DSE) data were never easier. Easy to use API. Pull requests, bug reports, feature requests are welcome.
 
