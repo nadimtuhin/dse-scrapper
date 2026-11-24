@@ -7,39 +7,26 @@ on:
     branches: [main, master]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.1', '8.4']
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        if: ${{ hashFiles('package.json') != '' }}
-        uses: actions/setup-node@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: '20'
-          cache: 'npm'
+          php-version: ${{ matrix.php }}
+          extensions: curl, json
 
       - name: Install dependencies
-        if: ${{ hashFiles('package.json') != '' }}
-        run: npm ci || npm install
+        run: composer install --no-interaction --no-progress
 
-      - name: Run lint
-        if: ${{ hashFiles('package.json') != '' }}
-        run: |
-          if npm run lint --if-present 2>/dev/null; then
-            echo "Lint passed"
-          else
-            echo "No lint script or lint skipped"
-          fi
-        continue-on-error: true
+      - name: Lint
+        run: for f in src/*.php tests/*.php example.php; do php -l "$f" || exit 1; done
 
       - name: Run tests
-        if: ${{ hashFiles('package.json') != '' }}
-        run: |
-          if npm test --if-present 2>/dev/null; then
-            echo "Tests passed"
-          else
-            echo "No test script or tests skipped"
-          fi
-        continue-on-error: true
+        run: vendor/bin/phpunit

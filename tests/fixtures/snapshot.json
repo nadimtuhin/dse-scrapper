@@ -1,0 +1,80 @@
+{
+  "prices": {
+    "cols": [
+      "code",
+      "ltp",
+      "ycp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "value",
+      "trades",
+      "percent",
+      "category",
+      "board",
+      "sector",
+      "assetType"
+    ],
+    "rows": [
+      [
+        "1JANATAMF",
+        3.2,
+        3.2,
+        3.2,
+        3.3,
+        3.1,
+        3.2,
+        426854,
+        1.362,
+        125,
+        0,
+        "A",
+        "PUBLIC",
+        "MutFund",
+        "MF"
+      ],
+      [
+        "GP",
+        226.4,
+        226.8,
+        226.8,
+        227.1,
+        226.3,
+        226.4,
+        91801,
+        20.8,
+        842,
+        -0.17636684303351222,
+        "A",
+        "PUBLIC",
+        "Telecom",
+        "EQ"
+      ]
+    ],
+    "session": {
+      "isOpen": false,
+      "phase": "closed",
+      "tradingDay": true,
+      "opening": "10:00",
+      "closing": "14:00",
+      "date": "2026-11-24",
+      "sessionDate": "2026-11-24",
+      "today": {
+        "date": "2026-11-24",
+        "preOpening": "09:55",
+        "opening": "10:00",
+        "closing": "14:00",
+        "postClosing": "14:10"
+      },
+      "next": {
+        "date": "2026-11-25",
+        "preOpening": "09:55",
+        "opening": "10:00",
+        "closing": "14:00",
+        "postClosing": "14:10"
+      }
+    }
+  }
+}

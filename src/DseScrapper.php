@@ -2,15 +2,20 @@
 namespace NadimTuhin\DSE;
 
 class DseScrapper {
+    private $downloader;
+
+    public function __construct(?Downloader $downloader = null)
+    {
+        $this->downloader = $downloader ?: new Downloader();
+    }
+
     public function scrap()
     {
-        // $html = file_get_contents(base_path('resources/views/dse.php'));
-        $downloader = new Downloader();
         $parser = new Parser();
         $transformer = new Transformer();
-        
-        $html = $downloader->download();
-        $data = $parser->parse($html);
+
+        $json = $this->downloader->download();
+        $data = $parser->parse($json);
         $data = $transformer->transform($data);
 
         return $data;
