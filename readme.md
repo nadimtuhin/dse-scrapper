@@ -4,9 +4,9 @@
 
 ![DSE Scrapper: Dhaka Stock Exchange prices as a PHP array](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/hero.svg)
 
-**One call, one array.** Back when DSE served the page.
+**One call, one array.** Latest DSE share prices.
 
-`MIT` `PHP 5.4+` `Composer`
+`MIT` `PHP 7.4+` `Composer`
 
 </div>
 
@@ -14,8 +14,8 @@
 
 ![Get started](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/h-start.svg)
 
-> [!WARNING]
-> This no longer works. DSE retired the page the scraper reads (`latest_share_price_all.php` now returns 410 Gone), so `scrap()` returns an empty array. Kept for reference.
+> [!NOTE]
+> DSE retired the old `latest_share_price_all.php` page (410 Gone). The scraper now reads `https://www.dsebd.org/api/live/snapshot`, the JSON feed behind the site's own Latest Share Price page. It is undocumented, so if DSE changes it, `scrap()` throws instead of returning an empty array.
 
 **1. Add it to `composer.json`:**
 
@@ -50,9 +50,9 @@ Save as `run.php`, then run `php run.php`.
 
 ![How it works](https://raw.githubusercontent.com/nadimtuhin/dse-scrapper/master/docs/images/h-how.svg)
 
-**Three small steps.** `Downloader` fetches the latest share price page from `dsebd.org`. `Parser` reads each table row. `Transformer` names the columns.
+**Three small steps.** `Downloader` fetches the live price snapshot from `dsebd.org`. `Parser` reads each row by column name. `Transformer` maps them to the keys below.
 
-**Values stay as text.** Numbers come back as strings, like `"1,105"`, so convert them yourself if you need math.
+**Numbers are numbers.** Prices, `value` (in million Tk) and `volume` come back as ints or floats. `change` is `ltp - ycp`, rounded to 2 places. The list covers every board DSE reports, including bonds, so expect more than 600 rows.
 
 <br>
 
@@ -89,30 +89,30 @@ print_r($data);
 
 ## Data Structure
 ```php
-array:321 [▼
+array:629 [▼
   0 => array:10 [▼
     "trading_code" => "1JANATAMF"
-    "ltp" => "4.1"
-    "high" => "4.3"
-    "low" => "4.1"
-    "closep" => "4.1"
-    "ycp" => "4.3"
-    "change" => "-0.2"
-    "trade" => "80"
-    "value" => "1.187"
-    "volume" => "283,615"
+    "ltp" => 3.2
+    "high" => 3.3
+    "low" => 3.1
+    "closep" => 3.2
+    "ycp" => 3.2
+    "change" => 0.0
+    "trade" => 125
+    "value" => 1.362
+    "volume" => 426854
   ]
   1 => array:10 [▼
-    "trading_code" => "1STICB"
-    "ltp" => "1,105"
-    "high" => "1,105"
-    "low" => "1,103.9"
-    "closep" => "1,104"
-    "ycp" => "1,075"
-    "change" => "30"
-    "trade" => "5"
-    "value" => "0.05"
-    "volume" => "45"
+    "trading_code" => "GP"
+    "ltp" => 226.4
+    "high" => 227.1
+    "low" => 226.3
+    "closep" => 226.4
+    "ycp" => 226.8
+    "change" => -0.4
+    "trade" => 842
+    "value" => 20.8
+    "volume" => 91801
   ]
   2 => array:10 [▶]
   3 => array:10 [▶]
